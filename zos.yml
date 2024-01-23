@@ -1,0 +1,26 @@
+rules:
+- description: zos error
+  regex: "[A-Z]{3,5}[0-9]+E\\W"
+  color: "f#ff0000"
+  exclusive: false
+- description: common abends
+  regex: "(?i)s?0c[1-9a-f](-[0-9]{0,2})?"
+  color: "f#ff0000"
+  exclusive: false
+- description: zos good
+  regex: "[A-Z]{3,5}[0-9]+I\\W"
+  color: "f#00ff00" # color 10
+  exclusive: false
+- description: zos warnings
+  regex: "[A-Z]{3,5}[0-9]+W\\W"
+  color: "f#ffff00" # color 11
+  exclusive: false
+- description: datasets
+  regex: "\\s([A-Z]){1}([A-Z0-9\\$\\#\\@\\-]){0,7}(\\.([A-Z\\$\\#\\@]){1}([A-Z0-9\\$\\#\\@\\-]){0,7}){1,11}"
+  color: "f#ff5f00" # color202
+  exclusive: false
+
+- description: "jcl left-hand"
+  regex: "(?<=//)[A-Z0-9]{1,8}\\s+(?=(IF|EXEC|DD|JOB|PROC))"
+  color: "f#00ffff" # color 51
+  exclusive: true

@@ -1,0 +1,18 @@
+rules:
+- description: error1
+  regex: "(?i)(?<=\\W)(no|off)(?=\\W)"
+  color: "f#ff0000"
+  exclusive: false
+- description: error2
+  regex: "(?i)error|fail|critical|invalid|fatal|abend|alert|abort|severe"
+  color: "f#ff0000"
+  exclusive: false
+- description: error3
+  regex: "(?i)false|undefined|null"
+  color: "f#ff0000"
+  exclusive: true
+- description: minus
+  regex: "(?<!\\-)\\-{1,2}(?=[\\s0-9])"
+  color: "f#ff0000"
+  exclusive: false
+

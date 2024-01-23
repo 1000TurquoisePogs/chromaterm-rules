@@ -1,0 +1,5 @@
+rules:
+- description: cli flags
+  regex: "\\W\\-[A-Za-z]+\\W"
+  color: "f#afffd7" # color 158
+  eclusive: false

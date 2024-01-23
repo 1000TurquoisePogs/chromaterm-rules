@@ -1,0 +1,5 @@
+rules:
+- description: warnings1
+  regex: "(?i)warn|caution|default|unknown|important"
+  color: "f#ffff00" # color 11
+  exclusive: false

@@ -1,0 +1,37 @@
+rules:
+- description: 64 bit hex first byte
+  regex: "(?!00000000)(?<=\\W)[0-9A-Fa-f]{2}(?=[0-9A-Fa-f]{14})"
+  color: "f#00ff00" # color207
+  exclusive: false
+- description: 64 bit hex first byte
+  regex: "(?<=\\W0x)[0-9A-Fa-f]{2}(?<!00)(?=[0-9A-Fa-f]{14})"
+  color: "f#00ff00" # color207
+  exclusive: false
+- description: 64 bit hex high 32 
+  regex: "(?!000000)(?<=[0-9A-Fa-f]{2})[0-9A-Fa-f]{6}(?=[0-9A-Fa-f]{8})"
+  color: "f#00aa00" # color207
+  exclusive: false
+- description: 64 bit hex middle byte
+  regex: "(?<=[0-9A-Fa-f]{8})[0-9A-Fa-f]{2}(?=[0-9A-Fa-f]{6})"
+  color: "f#00ffff" # color207
+  exclusive: false
+- description: 64 bit hex lower 32
+  regex: "(?<=[0-9A-Fa-f]{10})[0-9A-Fa-f]{6}"
+  color: "f#00aaaa" # color207
+  exclusive: false
+- description: 32 bit hex first byte
+  regex: "(?<=\\W)[0-9A-Fa-f]{2}(?=[0-9A-Fa-f]{6}[^0-9A-Fa-f])"
+  color: "f#00ffff" # color207
+  exclusive: false
+- description: 32 bit hex first byte
+  regex: "(?<=\\W0x)[0-9A-Fa-f]{2}(?=[0-9A-Fa-f]{6}[^0-9A-Fa-f])"
+  color: "f#00ffff" # color207
+  exclusive: false
+- description: 32 bit hex lower 32
+  regex: "(?<=\\W[0-9A-Fa-f]{2})[0-9A-Fa-f]{6}(?![0-9A-Fa-f])"
+  color: "f#00aaaa" # color207
+  exclusive: false
+- description: 32 bit hex lower 32
+  regex: "(?<=\\W0x[0-9A-Fa-f]{2})[0-9A-Fa-f]{6}(?![0-9A-Fa-f])"
+  color: "f#00aaaa" # color207
+  exclusive: false

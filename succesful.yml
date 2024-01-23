@@ -1,0 +1,18 @@
+rules:
+- description: good
+  regex: "(?i)\\W(on|valid)\\W"
+  color: "f#00ff00" # color 10
+  exclusive: false  
+- description: good2
+  regex: "(?i)yes|success"
+  color: "f#00ff00" # color 10
+  exclusive: false
+- description: good3
+  regex: "true|TRUE"
+  color: "f#00ff00" # color 10
+  exclusive: true
+- description: plus
+  regex: "(?<!\\+)\\+{1,2}(?!\\+)"
+  color: "f#00ff00" # color 10
+  exclusive: false
+

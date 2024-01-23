@@ -1,0 +1,5 @@
+rules:
+- description: urls
+  regex: "[a-z_-]+\\:\\/\\/[A-Za-z0-9\\.\\:\\/\\&\\?\\@_-]+"
+  color: "f#ff5f00" # color202
+  exclusive: true

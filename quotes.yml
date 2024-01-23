@@ -1,0 +1,10 @@
+rules:
+- description: single quote
+  regex: "'[^']*'"
+  color: "f#ffd75f" # color221
+  exclusive: false
+- description: double quote
+  regex: "\"[^\"]*\""
+  color: "f#ffd75f" # color221
+  exclusive: false
+  

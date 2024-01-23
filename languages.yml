@@ -1,0 +1,53 @@
+rules:
+- description: function params
+  regex: "\\([A-Za-z0-9\\ \\,\\*]*\\)"
+  color: "f#afffd7" # color 158
+  exclusive: false
+
+- description: keywords - case sensitive.
+  regex: "(int|long|unsigned|bool|boolean|var|let|String|const|char|import|export)\\W"
+  color: "f#00ffff" # color 51
+  exclusive: false
+- description: keywords2 - case sensitive.
+  regex: "\\w*(Array|Object|JSON|print|response|request)\\w*\\W"
+  color: "f#00ffff" # color 51  
+  exclusive: false
+- description: pointers
+  regex: "\\w+ \\*"
+  color: "f#00ffff" # color 51
+  exclusive: false
+
+- description: CONST_THINGS - case sensitive.
+  regex: "\\s[A-Z_][A-Z_]+(\\ |\\,|\\;|\\)|\\]|\\})"
+  color: "f#0087d7" # color32
+  exclusive: false
+- description: CONST_THINGS - case sensitive.
+  regex: "^[A-Z_][A-Z_]+(\\ |\\,|\\;|\\)|\\]|\\})"
+  color: "f#0087d7" # color32
+  exclusive: false
+
+- description: reserved words - case sensitive.
+  regex: "\\W(do|for|if|esac|fi)\\s*[\\[\\(\\{]"
+  color: "f#00af87" # color36 0
+  exclusive: false
+- description: reserved words - case sensitive.
+  regex: "switch|case|done|break|return|while|else|elif|static|debug|trace|info|then|function|this|class"
+  color: "f#00af87" # color36 0
+  exclusive: false
+
+- description: "// comment"
+  regex: "\\/\\/[A-Za-z0-9\\ \\.\\%\\\\\\:;\\&\\|\\/\\*\"'=+,_-]+"
+  color: "f#767676" # color 243
+  exclusive: false
+- description: "/* comment */"
+  regex: "\\/\\*.*\\*\\/"
+  color: "f#767676" # color 243
+  exclusive: false
+- description: "/* comment"
+  regex: "\\/\\*[^*]*$"
+  color: "f#767676" # color 243
+  exclusive: false
+- description: "#comment"
+  regex: "\\#[A-Za-z0-9\\ \\.#\\%\\\\\\:;\\&\\|\\/\\*\"'-=+,_-]+"
+  color: "f#767676" # color 243
+  exclusive: false
