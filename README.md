@@ -12,7 +12,7 @@ So far I do not see a way to include multiple rule files into ChromaTerm. Instea
 # Examples
 
 ## Log files
-![Example of log highlighting](log.png)
+![Example of log highlighting](logs.png)
 
 ## Dump files
 ![Example of hex highlighting](dump.png)
