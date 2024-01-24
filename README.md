@@ -9,6 +9,23 @@ So, expect some compromise and edge cases within the rules you see.
 
 So far I do not see a way to include multiple rule files into ChromaTerm. Instead, I recommend you find a collection of rules you like, and put them into one .chromaterm.yml file for use on your own machine.
 
+# Examples
+
+## Log files
+![Example of log highlighting](log.png)
+
+## Dump files
+![Example of hex highlighting](dump.png)
+
+## JCL
+![Example of JCL syntax highlighting](jcl.png)
+
+## JavaScript 
+![Example of JavaScript syntax highlighting](javascript.png)
+
+## Shell
+![Example of shell syntax highlighting](shell.png)
+
 # ChromaTerm setup recommendations
 I recommend applying chromaterm on entire ssh or tmux sessions such as with `ct ssh ...` or `ct tmux` to get the full benefit. Then, everything you do in your terminal will be colored; `cat`, `man`, logs, `vi`, and so on.
 
