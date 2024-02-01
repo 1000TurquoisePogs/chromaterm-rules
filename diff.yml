@@ -1,0 +1,14 @@
+- description: "diff added"
+  regex: "^\\+.*"
+  color: "f#00ff00" # color 10
+  exclusive: true
+
+# dashes in diffs can easily conflict with lists in programming languages. mix with caution.
+- description: "diff removed"
+  regex: "^\\-\\S+.*"
+  color: "f#ff0000"
+  exclusive: true
+- description: "diff removed"
+  regex: "^\\-\\s{2,}.*"
+  color: "f#ff0000"
+  exclusive: true

@@ -1,15 +1,27 @@
 rules:
+- description: functions
+  regex: "[^\\w]\\s+[A-Za-z]+\\s?(?=\\()"
+  color: "f#d7af00" # color 178
+  exclusive: true
+- description: functions
+  regex: "^[A-Za-z]+\\s?(?=\\()"
+  color: "f#d7af00" # color 178
+  exclusive: true
 - description: function params
   regex: "\\([A-Za-z0-9\\ \\,\\*]*\\)"
   color: "f#afffd7" # color 158
   exclusive: false
 
-- description: keywords - case sensitive.
-  regex: "(int|long|unsigned|bool|boolean|var|let|String|const|char|import|export)\\W"
+- description: keywords - case sensitive i hope.
+  regex: "[^\\w\\.\\'](int|long|unsigned|bool|boolean|var|let|String|const|char|import|enum|export)\\W"
   color: "f#00ffff" # color 51
   exclusive: false
-- description: keywords2 - case sensitive.
-  regex: "\\w*(Array|Object|JSON|print|response|request)\\w*\\W"
+- description: keywords - case sensitive i hope.
+  regex: "^(int|long|unsigned|bool|boolean|var|let|String|const|char|import|enum|export)\\W"
+  color: "f#00ffff" # color 51
+  exclusive: false
+- description: keywords2 - case sensitive i hope.
+  regex: "\\w*(Array|Object|JSON|print|Print|say|call|printf|println|echo|response|request)\\w*\\W"
   color: "f#00ffff" # color 51  
   exclusive: false
 - description: pointers
@@ -18,20 +30,24 @@ rules:
   exclusive: false
 
 - description: CONST_THINGS - case sensitive.
-  regex: "\\s[A-Z_][A-Z_]+(\\ |\\,|\\;|\\)|\\]|\\})"
+  regex: "(?<=\\s|\\W)[A-Z_]{3,}(?=\\ |=|\\,|\\;|\\)|\\]|\\})"
   color: "f#0087d7" # color32
   exclusive: false
 - description: CONST_THINGS - case sensitive.
-  regex: "^[A-Z_][A-Z_]+(\\ |\\,|\\;|\\)|\\]|\\})"
+  regex: "^[A-Z_]{3,}(?=\\ |=|\\,|\\;|\\)|\\]|\\})"
   color: "f#0087d7" # color32
   exclusive: false
 
-- description: reserved words - case sensitive.
-  regex: "\\W(do|for|if|esac|fi)\\s*[\\[\\(\\{]"
+- description: reserved words
+  regex: "\\W(do|for|if|fi)\\s+"
   color: "f#00af87" # color36 0
   exclusive: false
-- description: reserved words - case sensitive.
-  regex: "switch|case|done|break|return|while|else|elif|static|debug|trace|info|then|function|this|class"
+- description: reserved words
+  regex: "^(do|for|if|fi)\\s+"
+  color: "f#00af87" # color36 0
+  exclusive: false
+- description: reserved words
+  regex: "(switch|case|esac|done|break|return|while|else|elif|endif|static|public|private|debug|trace|info|then|function|fn|defun|this|class|method|end|exit)\\W+"
   color: "f#00af87" # color36 0
   exclusive: false
 

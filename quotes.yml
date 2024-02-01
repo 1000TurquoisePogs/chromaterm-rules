@@ -7,4 +7,7 @@ rules:
   regex: "\"[^\"]*\""
   color: "f#ffd75f" # color221
   exclusive: false
-  
+- description: back quote
+  regex: "`[^`]*`"
+  color: "f#ffd75f" # color221
+  exclusive: false
